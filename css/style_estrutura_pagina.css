@@ -17,19 +17,25 @@
 }
 /* formatando cabeçalho */
 #geral{
-    margin: 80px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 /* formatando o cabeçalho */
 #cabecalho{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 15px 10px;
+    padding: 20px 40px;
+    height: 100%;
 }
 /* configurando menu na horizontal */
 #menu ul{
     display: flex;
-    gap: 50px;
+    gap: 40px;
     list-style: none;
 }
 #menu ul img{
@@ -38,6 +44,7 @@
 }
 /* formatando a section pesquisa */
 #pesquisa{
+    width: 100%;
     height: 200px;
     background-color: var(--cor02);
     display: flex;
@@ -45,56 +52,85 @@
     align-items: center ;
 }
 #pesquisa input{
-    width: 600px;
-    height: 80px;
+    width: 400px;
+    height: 43px;
     background-color: white;
     border-radius: 0px;
-    padding: 10px;
-    font-size: 1.4em;
+    padding: 5px;
+    font-size: 1em;
 }
 #pesquisa input::placeholder{
     font-size: 1.3em;
     font-style: italic;
-    color: var(--cor01);
+    color:darkorange;
 }
 /* formatando os cards */
 #cards{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(500px, 1fr));
-    gap: 35px;
+    grid-template-columns: repeat(auto-fit,minmax(480px, 1fr));
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
 
 }
 .card{
     width: 250px;
-    min-height: 450px;
+    min-height: 100px;
     padding: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--cor01);
+    border: 1.5px solid;
+    color: darkblue;
     border-radius: 50px;
+}
+.card:hover{
+    transform: (translateY(-10px));
 }
 .card img{
     width: 150px;
     height: 200px;
     margin: 10px 0px;
+    border-radius: 75px;
 }
 .card p{
-    font-size: 1.2em;
+    font-size: 1em;
     text-transform: uppercase;
-    margin: 20px 0px;
+    margin: 5px 0px;
 }
-.card button{
+.card .btn-carrinho{
     width: 200px;
-    height: 20px;
+    height: 30px;
     margin: 20px;
     border: none;
-    border-radius: 5px;
-    background-color: var(--cor01);
+    border-radius: 8px;
+    background-color: red;
     text-transform: uppercase;
-    letter-spacing: 4px;
-    color: var(--cor01);
+    letter-spacing: 2px;
+    color: white;
     font-weight: bold;
     cursor: pointer;
+}
+/* formatar o rodapé*/
+#rodape{
+    width: 100%;
+    height: 250px;
+    background-color: orange;
+    margin: 20px 0px;
+    padding: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+/* formatando links */
+#menu a:link{
+    font-size: 1.0em;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    text-decoration: none;
+    color: orange;
 }
