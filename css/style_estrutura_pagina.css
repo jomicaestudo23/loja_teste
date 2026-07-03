@@ -17,22 +17,84 @@
 }
 /* formatando cabeçalho */
 #geral{
-    margin: 20px;
+    margin: 80px;
 }
 /* formatando o cabeçalho */
 #cabecalho{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0px 15px;
+    padding: 15px 10px;
 }
 /* configurando menu na horizontal */
 #menu ul{
     display: flex;
-    gap: 30px;
+    gap: 50px;
     list-style: none;
 }
 #menu ul img{
     width: 25px;
     height: 25px;
+}
+/* formatando a section pesquisa */
+#pesquisa{
+    height: 200px;
+    background-color: var(--cor02);
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+#pesquisa input{
+    width: 600px;
+    height: 80px;
+    background-color: white;
+    border-radius: 0px;
+    padding: 10px;
+    font-size: 1.4em;
+}
+#pesquisa input::placeholder{
+    font-size: 1.3em;
+    font-style: italic;
+    color: var(--cor01);
+}
+/* formatando os cards */
+#cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(500px, 1fr));
+    gap: 35px;
+
+}
+.card{
+    width: 250px;
+    min-height: 450px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--cor01);
+    border-radius: 50px;
+}
+.card img{
+    width: 150px;
+    height: 200px;
+    margin: 10px 0px;
+}
+.card p{
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin: 20px 0px;
+}
+.card button{
+    width: 200px;
+    height: 20px;
+    margin: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--cor01);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--cor01);
+    font-weight: bold;
+    cursor: pointer;
 }
