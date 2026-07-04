@@ -1,1 +1,45 @@
-@import url(style_estrutura_pagina.css)
+@import url(style_estrutura_pagina.css);
+
+#geral{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(247, 242, 183);
+}
+#logo{
+    margin: 50px;
+    font-size: 1.3em;
+}
+#menu ul{
+    font-size: 0.8em;
+    display: flex;
+    margin: 10px;
+    height: 10px;
+    gap: 10px;
+    list-style: none;
+}
+#menu ul img{
+    width: 25px;
+    height: 25px;
+}
+#cadastr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 20px;
+}
+#form{   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px;
+}
+#form label{
+    margin: 8px;
+}
+

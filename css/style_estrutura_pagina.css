@@ -7,7 +7,6 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: roboto;
-    background-color: rgb(247, 242, 183);
 }
 /* criando variáveis */
 :root{
@@ -18,26 +17,33 @@
 }
 /* formatando cabeçalho */
 #geral{
-    margin: 20px;
+    margin: 2px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
+    background-color: rgb(247, 242, 183);
 }
 /* formatando o cabeçalho */
 #cabecalho{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 10px 20px;
     height: 100%;
+}
+#logo{
+    margin: 50px;
+    font-size: 1.3em;
 }
 /* configurando menu na horizontal */
 #menu ul{
+    font-size: 0.8em;
     display: flex;
-    height: 20px;
-    gap: 30px;
+    margin: 10px;
+    height: 10px;
+    gap: 10px;
     list-style: none;
 }
 #menu ul img{
@@ -69,15 +75,17 @@
 /* formatando os cards */
 #cards{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(480px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));
     justify-content: center;
-    gap: 8px;
-    width: 100%;;
+    gap: 20px;
+    width: 100%;
+    margin: 5px;
 }
 .card{
+    margin: 50px;
     width: 250px;
-    min-height: 100px;
-    padding: 5px;
+    min-height: 200px;
+    padding: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
