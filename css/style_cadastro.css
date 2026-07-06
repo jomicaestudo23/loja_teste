@@ -1,7 +1,8 @@
 @import url(style_estrutura_pagina.css);
 
 #geral{
-    margin: 20px;
+    margin: 0px;
+    padding: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,6 +13,11 @@
 #logo{
     margin: 50px;
     font-size: 1.3em;
+}
+#cabecalho{
+    background-color: rgb(185, 59, 59);
+    height: 100%;
+    justify-content: space-around;
 }
 #menu ul{
     font-size: 0.8em;
@@ -32,7 +38,9 @@
     flex-direction: column;
     padding: 40px 20px;
 }
-#form{   
+#form{
+    background-color: white;
+    padding: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,5 +49,6 @@
 }
 #form label{
     margin: 8px;
+    padding: 0px 25px;
 }
 

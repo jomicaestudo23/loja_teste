@@ -27,10 +27,12 @@
 }
 /* formatando o cabeçalho */
 #cabecalho{
+    background-color: rgb(185, 59, 59);
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 10px 20px;
+    padding: 0px;
     height: 100%;
 }
 #logo{
