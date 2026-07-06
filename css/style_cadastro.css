@@ -13,9 +13,10 @@
 #logo{
     margin: 50px;
     font-size: 1.3em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #cabecalho{
-    background-color: rgb(185, 59, 59);
+    background-color: rgb(50, 81, 255);
     height: 100%;
     justify-content: space-around;
 }
@@ -31,24 +32,41 @@
     width: 25px;
     height: 25px;
 }
-#cadastr{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 40px 20px;
+#cadastr h3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.9em;
 }
-#form{
-    background-color: white;
+#cadastr{
+    background-color: rgb(175, 234, 243);
+    border: none;
+    border-radius: 30px;
     padding: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     margin: 30px;
+    width: 500px;
+}
+#form select{
+    display: block;
+    align-items: center;
 }
 #form label{
     margin: 8px;
     padding: 0px 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.3em;
 }
-
+#form input{
+    width: 300px;
+    height: 30px;
+    border-radius: 13px;
+}
+#botoes{
+    display: flex;
+    gap: 10px;
+    height: 30px;
+    width: 200px;
+    margin: 15px;
+}

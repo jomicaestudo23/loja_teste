@@ -27,7 +27,7 @@
 }
 /* formatando o cabeçalho */
 #cabecalho{
-    background-color: rgb(185, 59, 59);
+    background-color: rgb(50, 81, 255);
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -38,6 +38,7 @@
 #logo{
     margin: 50px;
     font-size: 1.3em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 /* configurando menu na horizontal */
 #menu ul{
@@ -56,7 +57,7 @@
 #pesquisa{
     width: 100%;
     height: 100px;
-    background-color: var(--cor02);
+    background-color: rgb(255, 255, 121);
     display: flex;
     justify-content: center;
     align-items: center ;
@@ -72,7 +73,7 @@
 #pesquisa input::placeholder{
     font-size: 1.3em;
     font-style: italic;
-    color:darkorange;
+    color:rgb(107, 64, 0);
 }
 /* formatando os cards */
 #cards{
