@@ -149,3 +149,11 @@
     color: orange;
     transition: color 0.3s ease;
 }
+/* formantando seções */
+#secoes-produtos{
+    width: 100%;
+    min-height: 100px;
+    background-color: aqua;
+    margin: 20px 0px;
+    padding: 5px;
+}
