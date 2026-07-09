@@ -1,0 +1,109 @@
+/*Importando o seletor do arquivo*/
+@import url(../css/style_estrutura_pagina.css);
+#carrinho{
+    min-height: 60px;
+    width: 1000px;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+/* formatando a section itens carrinhos */
+.item{
+    background-color: green;
+    color: white;
+    width: 400px;
+    height: 220px;
+    margin: 20px 0px;
+    border: 3px solid orchid;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.descricao-itens{
+    width: 20px;
+    height: 100px;
+}
+.descricao{
+    width: 150px;
+    height: 30px;
+    font-size: 1.5em;
+}
+.valores{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.input-quantidade{
+    width: 45px;
+}
+.input-item{
+    width: 45px;
+    text-align: center;
+    border: solid blueviolet;
+    border-radius: 10px;
+}
+.input-item[type="number"]{
+    display: flex;
+}
+.img-item img{
+    width: 150px;
+    min-height: 200px;
+    cursor: pointer;
+    border-radius: 100px;
+}
+#valores-carrinho{
+    background-color: royalblue;
+    width: 200px;
+    height: 850px;
+    margin: 0px 10px;
+    padding: 8px;   
+    display: block;
+    align-items: normal;
+}
+#div-cep, #div-calc-valor, #div-calc-total{
+    background-color: royalblue;
+    width: 100%;
+    min-height: 40px;
+    padding: 0px 5px 83px 0px;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid pink;
+    border-radius: 8px;
+}
+.titulo-valores-carrinho{
+    margin: 20px;
+    text-transform: uppercase;
+    background-color: darkcyan;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    color: darkslateblue;
+}
+.valor{
+    font-size: 1.3em;
+    color: greenyellow;
+    font-weight: bolder;
+}
+.btn-carrinho{
+    width: 250px;
+    height: 80px;
+    margin: 10px 0px;
+    border: none;
+    cursor: pointer;
+    color: springgreen;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-size: 1.3em;
+}
+#btn-continuar{
+    background-color: seagreen;
+}
+#btn-finalizar{
+    background-color: rebeccapurple;
+}
