@@ -75,6 +75,14 @@
     font-style: italic;
     color:rgb(107, 64, 0);
 }
+#menu-secoes{
+    font-size: 1.2em;
+    display: flex;
+    margin: 10px;
+    height: 10px;
+    gap: 30px;
+    list-style: none;
+}
 /* formatando os cards */
 #cards{
     display: grid;

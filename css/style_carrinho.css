@@ -15,7 +15,7 @@
     color: white;
     width: 400px;
     height: 220px;
-    margin: 20px 0px;
+    margin: 10px;
     border: 3px solid orchid;
     border-radius: 100px;
     display: flex;
@@ -55,19 +55,16 @@
     border-radius: 100px;
 }
 #valores-carrinho{
-    background-color: royalblue;
     width: 200px;
-    height: 850px;
-    margin: 0px 10px;
-    padding: 8px;   
-    display: block;
-    align-items: normal;
+    height: 85px;   
+    display: flex;
+    align-items: last baseline;
+    justify-content: left;
 }
 #div-cep, #div-calc-valor, #div-calc-total{
     background-color: royalblue;
     width: 100%;
-    min-height: 40px;
-    padding: 0px 5px 83px 0px;
+    min-height: 20px;
     gap: 8px;
     display: flex;
     flex-direction: column;
