@@ -1,36 +1,118 @@
 // importando os produtos
 import { produtos } from "./lista_produtos.js";
-// pegando elementos do dom
-const sectionCards = document.querySelector('#cards')
 
-// carregando os cards
+// pegando elementos do DOM
+const sectionCards = document.querySelector("#cards");
+
+// =======================================
+// Função responsável por montar os cards
+// =======================================
+const montaCards = (listaProdutos) => {
+
+    // Limpa os cards existentes
+    sectionCards.innerHTML = "";
+
+    // Percorre apenas a lista recebida
+    listaProdutos.forEach((elem) => {
+
+        // Card
+        const divCards = document.createElement("div");
+        divCards.className = "card";
+
+        // Imagem
+        const imgCard = document.createElement("img");
+        imgCard.src = elem.caminho_imagem;
+        imgCard.alt = elem.descricao_produto;
+
+        // Descrição
+        const pCard = document.createElement("p");
+        pCard.textContent = elem.descricao_produto;
+
+        // Preço
+        const h2Card = document.createElement("h2");
+        h2Card.textContent = `R$ ${parseFloat(elem.valor_unitario)
+            .toFixed(2)
+            .replace(".", ",")}`;
+
+        // Botão
+        const btnCard = document.createElement("button");
+        btnCard.className = "btn-add";
+        btnCard.textContent = "Adicionar";
+
+        // Montagem do card
+        divCards.appendChild(imgCard);
+        divCards.appendChild(pCard);
+        divCards.appendChild(h2Card);
+        divCards.appendChild(btnCard);
+
+        // Adiciona o card na página
+        sectionCards.appendChild(divCards);
+    });
+
+};
+
+// =======================================
+// Carrega todos os produtos
+// =======================================
 const listarProdutos = () => {
+    montaCards(produtos);
+};
 
-    produtos.forEach((elem, i) =>{
-    const divCards = document.createElement('div')
-    divCards.setAttribute('class', 'card')
+// =======================================
+// Cria as seções sem repetição
+// =======================================
+const menuSecoes = () => {
 
-    const imgCard = document.createElement('img')
-    imgCard.setAttribute('src', elem.caminho_imagem)
-    imgCard.setAttribute('alt',elem.descricao_produto )
+    const mapSecoes = new Map();
 
-    const pCard = document.createElement('p')
-    pCard.innerHTML = elem.descricao_produto
+    produtos.forEach((produto) => {
+        mapSecoes.set(produto.id_secao, produto);
+    });
 
-    const h2Card = document.createElement('h2')
-    h2Card.innerHTML = `R$ ${parseFloat(elem.valor_unitario).toFixed(2),replace('.',',')}`
+    return Array.from(mapSecoes.values());
+};
 
-    const btnCard = document.createElement('button')
-    btnCard.setAttribute('class', 'btn-add')
-    btnCard.innerHTML = 'Adicionar'
+// =======================================
+// Cria o menu de seções
+// =======================================
+const carregaSecoes = () => {
 
-    divCards.appendChild(imgCard)
-    divCards.appendChild(pCard)
-    divCards.appendChild(h2Card)
-    divCards.appendChild(btnCard)
+    const ulMenuSecoes = document.querySelector("#menu-secoes");
 
-    sectionCards.appendChild(divCards)
-})
+    ulMenuSecoes.innerHTML = "";
 
-}
-listarProdutos()
+    menuSecoes().forEach((secao) => {
+
+        const liMenu = document.createElement("li");
+
+        const aMenu = document.createElement("a");
+
+        aMenu.href = "#";
+        aMenu.className = "lnk-secao";
+        aMenu.textContent = secao.secao;
+
+        aMenu.addEventListener("click", (event) => {
+
+            event.preventDefault();
+
+            montaCards(filtroProduto(secao.id_secao));
+
+        });
+
+        liMenu.appendChild(aMenu);
+        ulMenuSecoes.appendChild(liMenu);
+
+    });
+
+};
+
+const filtroProduto = (idSecao) => {
+
+    return produtos.filter(
+        produto => produto.id_secao === idSecao
+    );
+
+};
+
+listarProdutos();
+carregaSecoes();
