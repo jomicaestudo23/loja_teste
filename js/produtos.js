@@ -1,13 +1,11 @@
 // importando os produtos
 import { produtos } from "./lista_produtos.js";
 // imporando o carrinho
-
+import { addItem } from "./carrinho.js";
 // pegando elementos do DOM
 const sectionCards = document.querySelector("#cards");
 
-// =======================================
 // Função responsável por montar os cards
-// =======================================
 const montaCards = (listaProdutos) => {
 
     // Limpa os cards existentes
@@ -52,16 +50,12 @@ const montaCards = (listaProdutos) => {
 
 };
 
-// =======================================
 // Carrega todos os produtos
-// =======================================
 const listarProdutos = () => {
     montaCards(produtos);
 };
 
-// =======================================
 // Cria as seções sem repetição
-// =======================================
 const menuSecoes = () => {
 
     const mapSecoes = new Map();
@@ -73,9 +67,7 @@ const menuSecoes = () => {
     return Array.from(mapSecoes.values());
 };
 
-// =======================================
 // Cria o menu de seções
-// =======================================
 const carregaSecoes = () => {
 
     const ulMenuSecoes = document.querySelector("#menu-secoes");
@@ -128,7 +120,7 @@ inputPesquisa.addEventListener('input', (evt) => {
     montaCards(produtos.filter(elem => elem.descricao_produto.toLowerCase().includes(txtInput)))
 })
 
-const montaCards2 = (objProduto) => {
+ montaCards = (objProduto) => {
     //Limpando o section cards
     sectionCards.innerHTML = ''
 
@@ -156,10 +148,11 @@ const montaCards2 = (objProduto) => {
         btnCard.setAttribute('class', 'btn-add')
         btnCard.innerHTML = 'Adicionar'
 
-        btnCard.addEventListener('click', () => {
-            addItem(elem)
-            window.location.href = '../paginas/carrinho.html'
-        })
+        btnCard.addEventListener("click", () => {
+    sessionStorage.removeItem("carrinhoSessao"); // limpa o carrinho
+    addItem(elem);                              // adiciona o novo item
+    window.location.href = "../paginas/carrinho.html";
+});
 
         //Adicionando os elementos filhos aos divCard
         divCard.appendChild(imgCard)
