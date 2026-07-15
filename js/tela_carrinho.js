@@ -58,8 +58,7 @@ const montaTelaCarrinho = (objListaItens) =>{
       inputQuantidade.setAttribute("name", `quant${i}`);
       inputQuantidade.setAttribute("id", `quant${i}`);
       inputQuantidade.setAttribute("class", "input-item");
-      inputQuantidade.setAttribute("min", "1");
-      inputQuantidade.setAttribute("value", "1");
+      inputQuantidade.setAttribute('value', elem.quantidade);
 
       divQuant.appendChild(inputQuantidade);
 

@@ -1,19 +1,41 @@
-//Criadno o array de itens do carrinho
-const itensCarrinho = JSON.parse(sessionStorage.getItem('carrinhoSessao')) || []
-//const itensCarrinho2 = JSON.parse(localStorage.get('carrinhoSessao')) || []
-
-//Função para adicionar um item
-const addItem = (objItem)=>{
-    itensCarrinho.push(objItem)
-
-    sessionStorage.setItem('carrinhoSessao', JSON.stringify(itensCarrinho))
+// função intem
+const item = (objProduto)=>{
+    const item = {
+        id_produto: objProduto.id_produto,
+        descricao_produto:objProduto.descricao_produto,
+        valor_unitario: objProduto.valor_unitario,
+        unidade: objProduto.unidade,
+        caminho_imagem: objProduto.caminho_imagem,
+        quantidade: 1 ,
+    }
+    return item
 }
 
-//Função para listar os itens do carrinho
-const listItens = () =>{
-    const listaItens = JSON.parse(sessionStorage.getItem('carrinhoSessao'))
+// Adiciona um único item ao carrinho
+const addItem = (objItem) => {
+    const itensCarrinho = [objItem];
 
-    return listaItens
-}
-//Exportação
-export{addItem, listItens}
+    sessionStorage.setItem(
+        "carrinhoSessao",
+        JSON.stringify(itensCarrinho)
+    );
+};
+
+// Lista os itens
+const listItens = () => {
+    return JSON.parse(sessionStorage.getItem("carrinhoSessao")) || [];
+};
+
+// Remove o item
+const removeItem = (indice) => {
+    const itensCarrinho = listItens();
+
+    itensCarrinho.splice(indice, 1);
+
+    sessionStorage.setItem(
+        "carrinhoSessao",
+        JSON.stringify(itensCarrinho)
+    );
+};
+
+export { addItem, listItens, removeItem };
