@@ -1,106 +1,411 @@
-/*Importando o seletor do arquivo*/
+/* Importando o CSS principal */
 @import url(../css/style_estrutura_pagina.css);
+
+/* Carrinho */
 #carrinho{
-    min-height: 60px;
-    width: 1000px;
-    margin: 20px;
-    padding: 10px;
+    width: 95%;
+    max-width: 1400px;
+    margin: 30px auto;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
 }
-/* formatando a section itens carrinhos */
-.item{
-    background-color: green;
-    color: white;
-    width: 400px;
-    height: 220px;
-    margin: 10px;
-    border: 3px solid orchid;
-    border-radius: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-.descricao-itens{
-    width: 20px;
-    height: 100px;
-}
-.descricao{
-    width: 150px;
-    height: 30px;
-    font-size: 1.5em;
-}
-.valores{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-.input-quantidade{
-    width: 45px;
-}
-.input-item{
-    width: 45px;
-    text-align: center;
-    border: solid blueviolet;
-    border-radius: 10px;
-}
-.input-item[type="number"]{
-    display: flex;
-}
-.img-item img{
-    width: 150px;
-    min-height: 200px;
-    cursor: pointer;
-    border-radius: 100px;
-}
-#valores-carrinho{
-    width: 200px;
-    height: 85px;   
-    display: flex;
-    align-items: last baseline;
-    justify-content: left;
-}
-#div-cep, #div-calc-valor, #div-calc-total{
-    background-color: royalblue;
-    width: 100%;
-    min-height: 20px;
-    gap: 8px;
+
+/* Lista de itens */
+#itens-carrinho{
+    width: 70%;
     display: flex;
     flex-direction: column;
+    gap: 20px;
+}
+
+/* Card */
+.item{
+    display: flex;
     align-items: center;
-    justify-content: center;
-    border: 1px solid pink;
-    border-radius: 8px;
+    justify-content: space-around;
+    background: linear-gradient(135deg,#ff9800,#ef6c00);
+    border: 4px solid #1565c0;
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 8px 18px rgba(0,0,0,.25);
 }
-.titulo-valores-carrinho{
-    margin: 20px;
-    text-transform: uppercase;
-    background-color: darkcyan;
-    width: 100%;
+
+/* Imagem */
+.img-item img{
+    width: 150px;
+    height: 180px;
+    object-fit: contain;
+    background: white;
+    border-radius: 15px;
+    padding: 8px;
+}
+
+/* Descrição */
+.descricoes-itens,
+#descricoes-itens{
+    width: 60%;
+}
+
+.descricao{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Preço e quantidade */
+#valores{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#valores p{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.input-item{
+    width: 60px;
+    height: 35px;
     text-align: center;
-    padding: 5px;
-    color: darkslateblue;
-}
-.valor{
-    font-size: 1.3em;
-    color: greenyellow;
-    font-weight: bolder;
-}
-.btn-carrinho{
-    width: 250px;
-    height: 80px;
-    margin: 10px 0px;
-    border: none;
-    cursor: pointer;
-    color: springgreen;
+    border: 2px solid #1565c0;
     border-radius: 8px;
+    font-size: 1.1em;
+}
+
+/* Painel lateral */
+#valores-carrinho{
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#div-cep,
+#div-calc-valor,
+#div-calc-total{
+    background: #1565c0;
+    border: 3px solid #ffd54f;
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,.25);
+}
+
+.titulo-valores-carrinho{
+    text-align: center;
+    color: #ffd54f;
+    margin-bottom: 15px;
     text-transform: uppercase;
-    font-size: 1.3em;
 }
+
+.valor{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* CEP */
+.input-cep{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    padding-left: 10px;
+    font-size: 1em;
+}
+
+/* Botões */
+#btn-finalizar,
 #btn-continuar{
-    background-color: seagreen;
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
 }
+
 #btn-finalizar{
-    background-color: rebeccapurple;
+    background: #d32f2f;
+    color: white;
+}
+
+#btn-finalizar:hover{
+    background: #b71c1c;
+}
+
+#btn-continuar{
+    background: #ff9800;
+    color: white;
+}
+
+#btn-continuar:hover{
+    background: #ef6c00;
+}
+
+/* Responsivo */
+@media(max-width:900px){
+
+    #carrinho{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #itens-carrinho,
+    #valores-carrinho{
+        width:100%;
+    }
+
+    .item{
+        flex-direction: column;
+        text-align:center;
+        gap:20px;
+    }
+
+    .descricoes-itens,
+    #descricoes-itens{
+        width:100%;
+    }
+
+    #valores{
+        flex-direction: column;
+        gap:15px;
+    }
+
+}/* Importando o CSS principal */
+@import url(../css/style_estrutura_pagina.css);
+
+/* ============================
+   CARRINHO
+============================ */
+
+#carrinho{
+    width: 95%;
+    max-width: 1400px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 35px;
+}
+
+/* ============================
+   LISTA DE ITENS
+============================ */
+
+#itens-carrinho{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: linear-gradient(135deg,#ff9800,#ef6c00);
+    border: 4px solid #1565c0;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 8px 18px rgba(0,0,0,.25);
+    transition: .3s;
+}
+
+.item:hover{
+    transform: translateY(-4px);
+}
+
+/* ============================
+   IMAGEM
+============================ */
+
+.img-item{
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-item img{
+    width: 150px;
+    height: 180px;
+    object-fit: contain;
+    background: white;
+    border-radius: 15px;
+    padding: 8px;
+}
+
+/* ============================
+   DESCRIÇÃO
+============================ */
+
+.descricao-itens{
+    flex: 1;
+    padding-left: 30px;
+}
+
+.descricao{
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ============================
+   PREÇO E QUANTIDADE
+============================ */
+
+.valores{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.valores p{
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.input-item{
+    width: 65px;
+    height: 38px;
+    text-align: center;
+    border: 2px solid #1565c0;
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+}
+
+/* ============================
+   PAINEL LATERAL
+============================ */
+
+#valores-carrinho{
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Cards laterais */
+
+#div-cep,
+#div-calc-valor,
+#div-calc-total{
+    background: #1565c0;
+    border: 3px solid #ffd54f;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,.25);
+}
+
+/* Títulos */
+
+.titulo-valores-carrinho{
+    color: #ffd54f;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+/* Valores */
+
+.valor{
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* CEP */
+
+.input-cep{
+    width: 100%;
+    height: 42px;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1em;
+}
+
+/* ============================
+   BOTÕES
+============================ */
+
+#btn-finalizar,
+#btn-continuar{
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#btn-finalizar{
+    background: #d32f2f;
+    color: white;
+}
+
+#btn-finalizar:hover{
+    background: #b71c1c;
+    transform: scale(1.03);
+}
+
+#btn-continuar{
+    background: #ff9800;
+    color: white;
+}
+
+#btn-continuar:hover{
+    background: #ef6c00;
+    transform: scale(1.03);
+}
+
+/* ============================
+   RESPONSIVO
+============================ */
+
+@media (max-width: 1000px){
+
+    #carrinho{
+        flex-direction: column;
+    }
+
+    #itens-carrinho,
+    #valores-carrinho{
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 700px){
+
+    .item{
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .descricao-itens{
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .valores{
+        flex-direction: column;
+        gap: 15px;
+    }
+
 }
