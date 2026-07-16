@@ -30,8 +30,7 @@ const montaCards = (listaProdutos) => {
         // Preço
         const h2Card = document.createElement("h2");
         h2Card.textContent = `R$ ${parseFloat(elem.valor_unitario)
-            .toFixed(2)
-            .replace(".", ",")}`;
+            .toFixed(2).replace(".", ",")}`;
 
         // Botão
         const btnCard = document.createElement("button");
@@ -62,7 +61,7 @@ const listarProdutos = () => {
 
 // Cria as seções sem repetição
 const menuSecoes = () => {
-
+// map para rastrear o id das seções
     const mapSecoes = new Map();
 
     produtos.forEach((produto) => {
@@ -114,7 +113,7 @@ const filtroProduto = (idSecao) => {
 
 listarProdutos();
 carregaSecoes();
-
+// input de pesquisa
 const inputPesquisa = document.querySelector('#pesquisa')
 
 inputPesquisa.addEventListener('input', (evt) => {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,205 +12,90 @@
 
 <body>
 
-<main id="geral">
+    <main id="geral">
 
-    <header id="cabecalho">
+        <header id="cabecalho">
 
-        <div id="logo">
-            DragonBall Verse
-        </div>
-
-        <nav id="menu">
-            <ul>
-                <li><a href="../index.html">Página Inicial</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
-            </ul>
-        </nav>
-
-    </header>
-
-    <section id="carrinho">
-
-        <section id="itens-carrinho">
-
-            <div class="item">
-
-                <div class="img-item">
-                    <img src="../imagens/gohan_beast.png" alt="Gohan Beast">
-                </div>
-
-                <div class="descricao-itens">
-
-                    <div class="descricao">
-                        Gohan Beast
-                    </div>
-
-                    <div class="valores">
-
-                        <p>R$ 25,00</p>
-
-                        <div class="input-quantidade">
-                            <input type="number" class="input-item" value="1" min="1">
-                        </div>
-                        <button class="btn-remover" type="reset"><img src="../imagens/icones/remover.png" alt="remover"></button>
-
-                    </div>
-
-                </div>
-
+            <div id="logo">
+                DragonBall Verse
             </div>
 
-            <div class="item">
+            <nav id="menu">
+                <ul>
+                    <li><a href="../index.html">Página Inicial</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                </ul>
+            </nav>
 
-                <div class="img-item">
-                    <img src="../imagens/goku_ssj1.png" alt="Goku SSJ1">
-                </div>
+        </header>
 
-                <div class="descricao-itens">
+        <section id="carrinho">
 
-                    <div class="descricao">
-                        Goku SSJ1
-                    </div>
+            <!-- Os produtos serão criados pelo JavaScript -->
+            <section id="itens-carrinho"></section>
 
-                    <div class="valores">
+            <section id="valores-carrinho">
 
-                        <p>R$ 25,00</p>
+                <div id="div-cep">
 
-                        <div class="input-quantidade">
-                            <input type="number" class="input-item" value="1" min="1">
-                        </div>
-                        <button class="btn-remover" type="reset"><img src="../imagens/icones/remover.png" alt="remover"></button>
+                    <h2 class="titulo-valores-carrinho">CEP</h2>
 
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="item">
-
-                <div class="img-item">
-                    <img src="../imagens/goku_ssj2.png" alt="Goku SSJ2">
-                </div>
-
-                <div class="descricao-itens">
-
-                    <div class="descricao">
-                        Goku SSJ2
-                    </div>
-
-                    <div class="valores">
-
-                        <p>R$ 25,00</p>
-
-                        <div class="input-quantidade">
-                            <input type="number" class="input-item" value="1" min="1">
-                        </div>
-                        <button class="btn-remover" type="reset"><img src="../imagens/icones/remover.png" alt=""></button>
-
-                    </div>
+                    <input
+                        type="text"
+                        id="input-cep"
+                        class="input-cep"
+                        placeholder="Digite seu CEP">
 
                 </div>
 
-            </div>
+                <div id="div-calc-valor">
 
-            <div class="item">
+                    <h2 class="titulo-valores-carrinho">
+                        Valor Total
+                    </h2>
 
-                <div class="img-item">
-                    <img src="../imagens/goku_ssj3.png" alt="Goku SSJ3">
-                </div>
+                    <p id="valor-produtos" class="valor">
+                        R$ 0,00
+                    </p>
 
-                <div class="descricao-itens">
+                    <h2 class="titulo-valores-carrinho">
+                        Valor do Frete
+                    </h2>
 
-                    <div class="descricao">
-                        Goku SSJ3
-                    </div>
-
-                    <div class="valores">
-
-                        <p>R$ 25,00</p>
-
-                        <div class="input-quantidade">
-                            <input type="number" class="input-item" value="1" min="1">
-                        </div>
-                        <button class="btn-remover" type="reset"><img src="../imagens/icones/remover.png" alt="remover"></button>
-
-                    </div>
+                    <p id="valor-frete" class="valor">
+                        R$ 0,00
+                    </p>
 
                 </div>
 
-            </div>
+                <div id="div-calc-total">
 
-            <div class="item">
+                    <h2 class="titulo-valores-carrinho">
+                        Total a Pagar
+                    </h2>
 
-                <div class="img-item">
-                    <img src="../imagens/goku_ssj4.png" alt="Goku SSJ4">
-                </div>
-
-                <div class="descricao-itens">
-
-                    <div class="descricao">
-                        Goku SSJ4
-                    </div>
-
-                    <div class="valores">
-
-                        <p>R$ 25,00</p>
-
-                        <div class="input-quantidade">
-                            <input type="number" class="input-item" value="1" min="1">
-                        </div>
-                        <button class="btn-remover" type="reset"><img src="../imagens/icones/remover.png" alt="remover"></button>
-
-                    </div>
+                    <p id="valor-total" class="valor">
+                        R$ 0,00
+                    </p>
 
                 </div>
 
-            </div>
+                <button id="btn-finalizar">
+                    Finalizar Compra
+                </button>
+
+                <button id="btn-continuar">
+                    Continuar Comprando
+                </button>
+
+            </section>
 
         </section>
 
-        <section id="valores-carrinho">
-
-            <div id="div-cep">
-
-                <h2 class="titulo-valores-carrinho">CEP</h2>
-
-                <input type="text" id="input-cep" class="input-cep" placeholder="Digite seu CEP">
-
-            </div>
-
-            <div id="div-calc-valor">
-
-                <h2 class="titulo-valores-carrinho">Valor Total</h2>
-
-                <p class="valor">R$ 100,00</p>
-
-                <h2 class="titulo-valores-carrinho">Valor do Frete</h2>
-
-                <p class="valor">R$ 1,00</p>
-
-            </div>
-
-            <div id="div-calc-total">
-
-                <h2 class="titulo-valores-carrinho">Total a Pagar</h2>
-
-                <p class="valor">R$ 101,00</p>
-
-            </div>
-
-            <button id="btn-finalizar">Finalizar Compra</button>
-
-            <button id="btn-continuar">Continuar Comprando</button>
-
-        </section>
-
-    </section>
-
-</main>
+    </main>
 
 </body>
+
 </html>

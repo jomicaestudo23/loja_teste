@@ -4,7 +4,7 @@ const produtos = [
         descricao_produto: "Oozaru Base",
         valor_unitario: 25.00,
         unidade: "UN",
-        caminho_imagem: "imagens/oozaru.png",
+        caminho_imagem: "../imagens/oozaru.png",
         id_secao: 3,
         secao: "Outros"
     },
@@ -13,7 +13,7 @@ const produtos = [
         descricao_produto: "Goku Super Sayajin 1",
         valor_unitario: 25.00,
         unidade: "UN",
-        caminho_imagem: "imagens/goku_ssj1.png",
+        caminho_imagem: "../imagens/goku_ssj1.png",
         id_secao: 1,
         secao: "Goku"
     },
@@ -22,7 +22,7 @@ const produtos = [
         descricao_produto: "Goku Super Sayajin 2",
         valor_unitario: 25.00,
         unidade: "UN",
-        caminho_imagem: "imagens/goku_ssj2.png",
+        caminho_imagem: "../imagens/goku_ssj2.png",
         id_secao: 1,
         secao: "Goku"
     },
@@ -31,7 +31,7 @@ const produtos = [
         descricao_produto: "Goku Super Sayajin 3",
         valor_unitario: 25.00,
         unidade: "UN",
-        caminho_imagem: "imagens/goku_ssj3.png",
+        caminho_imagem: "../imagens/goku_ssj3.png",
         id_secao: 1,
         secao: "Goku"
     },
@@ -40,7 +40,7 @@ const produtos = [
         descricao_produto: "Goku Super Sayajin 4",
         valor_unitario: 25.00,
         unidade: "UN",
-        caminho_imagem: "imagens/goku_ssj4.png",
+        caminho_imagem: "../imagens/goku_ssj4.png",
         id_secao: 1,
         secao: "Goku"
     },
@@ -49,7 +49,7 @@ const produtos = [
         descricao_produto: "Goku Deus Super Sayajin",
         valor_unitario: 25.00,
         unidade: "UN",
-        caminho_imagem: "imagens/goku_ssj_god.png",
+        caminho_imagem: "../imagens/goku_ssj_god.png",
         id_secao: 1,
         secao: "Goku"
     },
@@ -58,7 +58,7 @@ const produtos = [
         descricao_produto: "Goku Super Sayajin Blue",
         valor_unitario: 25.00,
         unidade: "UN",
-        caminho_imagem: "imagens/goku_ssj_blue.png",
+        caminho_imagem: "../imagens/goku_ssj_blue.png",
         id_secao: 1,
         secao: "Goku"
     },
@@ -67,7 +67,7 @@ const produtos = [
         descricao_produto: "Goku Super Sayajin Blue com Kaioken",
         valor_unitario: 25.00,
         unidade: "UN",
-        caminho_imagem: "imagens/goku_ssj_blue_kaioken.png",
+        caminho_imagem: "../imagens/goku_ssj_blue_kaioken.png",
         id_secao: 1,
         secao: "Goku"
     },
@@ -76,7 +76,7 @@ const produtos = [
         descricao_produto: "Goku Instinto Superior Incompleto",
         valor_unitario: 25.00,
         unidade: "UN",
-        caminho_imagem: "imagens/goku_instinto_sup_incomp.png",
+        caminho_imagem: "../imagens/goku_instinto_sup_incomp.png",
         id_secao: 1,
         secao: "Goku"
     }
