@@ -77,9 +77,7 @@ const montaTelaCarrinho = (objListaItens) =>{
       const atualizaTotal = () => {
           const total = elem.valor_unitario * Number(inputQuantidade.value);
 
-          pTotal.textContent = `Total: R$ ${total
-              .toFixed(2)
-              .replace(".", ",")}`;
+          pTotal.textContent = `Total: R$ ${total.toFixed(2).replace(".", ",")}`;
       };
 
       atualizaTotal();
