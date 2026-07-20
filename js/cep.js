@@ -1,9 +1,11 @@
+// pegando elemento dom
 const cep = document.querySelector("#cep");
 const endereco = document.querySelector("#endereco");
 const bairro = document.querySelector("#bairro");
 const cidade = document.querySelector("#cidade");
 const estado = document.querySelector("#estado");
 
+// capturando um evento
 cep.addEventListener("blur", buscarCEP);
 
 async function buscarCEP() {
